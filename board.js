@@ -9,12 +9,17 @@ $(document).ready(function() {
       var y = row * 100;
 
       var SVGObj = document.createElementNS(NS,"rect");
+      var SVGCircle = document.createElementNS(NS,"circle");
       SVGObj.setAttribute("x", x);
       SVGObj.setAttribute("y", y);
       SVGObj.setAttribute("fill", "gray");
       SVGObj.setAttribute("stroke", "black");
       SVGObj.setAttribute("height", "100");
       SVGObj.setAttribute("width", "100");
+
+      SVGCircle.setAttribute("x", x);
+      SVGCircle.setAttribute("y", y);
+      SVGCircle.setAttribute("fill", "#E36723");
 
       $('svg').append(SVGObj);
     }
