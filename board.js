@@ -17,11 +17,15 @@ $(document).ready(function() {
       SVGObj.setAttribute("height", "100");
       SVGObj.setAttribute("width", "100");
 
-      SVGCircle.setAttribute("x", x);
-      SVGCircle.setAttribute("y", y);
+      SVGCircle.setAttribute("cx", x+50);
+      SVGCircle.setAttribute("cy", y+50);
+      SVGCircle.setAttribute("r", "40");
       SVGCircle.setAttribute("fill", "#E36723");
+      SVGCircle.setAttribute("height", "80");
+      SVGCircle.setAttribute("width", "80");
 
-      $('svg').append(SVGObj);
+      $('#squares').append(SVGObj);
+      $('#circles').append(SVGCircle);
     }
   }
 });
