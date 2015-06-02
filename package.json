@@ -1,0 +1,27 @@
+{
+  "name": "connect-four",
+  "version": "1.0.0",
+  "description": "Connect Four game in the browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neslom/connect-four.git"
+  },
+  "author": "Markus Olsen and Kyra Steenbock",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neslom/connect-four/issues"
+  },
+  "homepage": "https://github.com/neslom/connect-four#readme",
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4"
+  }
+}
