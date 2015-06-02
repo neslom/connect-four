@@ -19,10 +19,8 @@
   "homepage": "https://github.com/neslom/connect-four#readme",
   "devDependencies": {
     "chai": "^2.3.0",
-    "gulp": "^3.9.0",
-    "gulp-babel": "^5.1.0",
-    "gulp-mocha": "^2.1.0",
-    "mocha": "^2.2.5"
+    "mocha": "^2.2.5",
+    "webpack-dev-server": "^1.9.0"
   },
   "dependencies": {
     "babel": "^5.4.7",
