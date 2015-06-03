@@ -1,3 +1,4 @@
 client/components
 client/components/*
 node_modules
+build
