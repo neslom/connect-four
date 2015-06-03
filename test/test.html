@@ -1,14 +1,32 @@
 <!DOCTYPE html>
+
 <html>
   <head>
-    <title>Connect Four</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../main.css">
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
   </head>
-
   <body>
-    <h1>Connect Four</h1>
-    <div id="board">
+    <div id="mocha"></div>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+
+    <script>
+      mocha.setup('bdd')
+      mocha.reporter('html');
+    </script>
+
+    <!-- Tests -->
+    <script src="../build/test.js"></script>
+
+    <script>
+// Only tests run in real browser, injected script run if options.run == true
+if (navigator.userAgent.indexOf('PhantomJS') < 0) {
+  mocha.run();
+}
+    </script>
+
+    <div id="board" style="display:none;">
       <svg xmlns="http://www.w3.org/2000/svg" width='700' height='600'>
         <g>
           <g id="squares"></g>
@@ -16,7 +34,5 @@
         </g>
       </svg>
     </div>
-
-    <script src="../build/test.js"></script>
   </body>
 </html>
