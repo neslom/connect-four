@@ -1,4 +1,4 @@
-import path from 'path';
+const path = require('path');
 const nodeModulesDir = path.join(__dirname, "node_modules");
 
 module.exports = {
