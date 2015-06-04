@@ -3,6 +3,15 @@ import Board from '../lib/board.js';
 import $ from 'jquery';
 
 describe('Board', function() {
+  beforeEach(function () {
+    Board.drawBoard();
+  });
+
+  afterEach(function () {
+    $('#squares').empty();
+    $('#circles').empty();
+  });
+
   describe('#svgBody', function() {
     it('returns a string of html to draw the rect with the input x and y coordinates', function() {
       expect(Board.svgBody(3, 4)).to.eq('<rect x="3" y="4" width="50" height="50" stroke="red" stroke-width="3"/>');
@@ -10,7 +19,6 @@ describe('Board', function() {
   });
 
   describe('in initial state', function(){
-    Board.drawBoard();
     it('displays an empty board', function(){
       expect($('.filled').length).to.eq(0);
       expect($('rect').length).to.eq(42);
@@ -18,9 +26,11 @@ describe('Board', function() {
   });
 
   describe('user interaction', function () {
-    Board.drawBoard();
     it('circle has filled class applied upon click', function () {
-
+      expect($('.filled').length).to.eq(0);
+      let empty = $('.empty').splice(0, 1);
+      $(empty).click();
+      expect($('.filled').length).to.eq(1);
     });
   });
 });
