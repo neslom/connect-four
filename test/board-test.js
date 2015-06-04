@@ -16,4 +16,11 @@ describe('Board', function() {
       expect($('rect').length).to.eq(42);
     });
   });
+
+  describe('user interaction', function () {
+    Board.drawBoard();
+    it('circle has filled class applied upon click', function () {
+
+    });
+  });
 });
