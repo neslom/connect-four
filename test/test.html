@@ -8,6 +8,16 @@
   </head>
   <body>
     <div id="mocha"></div>
+
+    <div id="board" style="display:none;">
+      <svg xmlns="http://www.w3.org/2000/svg" width='700' height='600'>
+        <g>
+          <g id="squares"></g>
+          <g width="700" height="600" id="circles"></g>
+        </g>
+      </svg>
+    </div>
+
     <script src="../node_modules/mocha/mocha.js"></script>
     <script src="../node_modules/chai/chai.js"></script>
 
@@ -26,13 +36,5 @@ if (navigator.userAgent.indexOf('PhantomJS') < 0) {
 }
     </script>
 
-    <div id="board" style="display:none;">
-      <svg xmlns="http://www.w3.org/2000/svg" width='700' height='600'>
-        <g>
-          <g id="squares"></g>
-          <g width="700" height="600" id="circles"></g>
-        </g>
-      </svg>
-    </div>
   </body>
 </html>

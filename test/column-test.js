@@ -3,7 +3,6 @@ const Column = require('../lib/columns.js');
 const Board = require('../lib/board.js');
 const $ = require('jquery');
 
-console.log("RUNNING TEST FILE");
 describe('Column', function() {
 
   beforeEach(function () {
@@ -19,7 +18,8 @@ describe('Column', function() {
   describe('empty circle', function() {
     it('knows if it is empty', function() {
       let circle = $('circle')[0];
-      expect(Column.circleEmpty(circle)).to.eq(true);
+      expect(Column.isCircleEmpty(circle)).to.eq(true);
     });
   });
+
 });
