@@ -1,5 +1,5 @@
 body {
-  background-color:#E36723;
+  background-color:grey;
 }
 
 #board {
@@ -8,13 +8,17 @@ body {
   width:700px;
 }
 
-h1{
+h1 {
   padding:20px;
   width:25%;
   margin:0 auto;
   color:#e3f6a7;
   text-align:center;
   font-family:courier;
+}
+
+.filled {
+  fill: tomato;
 }
 
 

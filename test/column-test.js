@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const circleEmpty = require('../lib/columns.js');
+const Column = require('../lib/columns.js');
 const Board = require('../lib/board.js');
 const $ = require('jquery');
 
@@ -10,10 +10,16 @@ describe('Column', function() {
     Board.drawBoard();
   });
 
+  describe('empty column clicked', function() {
+    it("finds the last empty circle", function() {
+       expect(Column.openCircle("50")).to.be.undefined;
+    });
+  });
+
   describe('empty circle', function() {
     it('knows if it is empty', function() {
       let circle = $('circle')[0];
-      expect(circleEmpty(circle)).to.eq(true);
+      expect(Column.circleEmpty(circle)).to.eq(true);
     });
   });
 });
