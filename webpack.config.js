@@ -1,5 +1,6 @@
-const path = require("path");
+import path from 'path';
 const nodeModulesDir = path.join(__dirname, "node_modules");
+
 module.exports = {
   entry: {
     main: "./index.js",
