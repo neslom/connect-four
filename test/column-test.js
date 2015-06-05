@@ -10,7 +10,7 @@ describe('Column', function() {
 
   describe('empty column clicked', function() {
     it('finds the last empty circle', function() {
-      expect(Column.openCircle('50')).to.be.undefined;
+      expect(Column.openCircle('0')).to.be.undefined;
     });
   });
 
