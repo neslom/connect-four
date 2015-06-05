@@ -17,10 +17,10 @@ h1 {
   font-family:courier;
 }
 
-.filled {
+.redPiece {
   fill: tomato;
 }
 
-.black {
+.blackPiece {
   fill: black;
 }
