@@ -32,12 +32,12 @@ describe('Game', function() {
       expect(Game.checkState()).to.eq(true);
     });
 
-      it("finds four in a row", function() {
-        $('.empty').click();
-        $('.empty').click();
-        $('.empty').click();
-        $('.empty').click();
-        expect(Game.checkState()).to.eq('<div><h1>YOU HAVE ONE</h1></div>')
+      it("finds four consecutive peices in a column", function() {
+        for(let i = 0; i < 5; i ++) {
+          $('.empty[column-id="0"]').click();
+          $('.empty[column-id="2"]').click();
+        }
+        expect(Game.checkState($('.empty[column-id="0"]'))).to.eq('<div><h1>YOU HAVE ONE</h1></div>')
       })
     });
 });
