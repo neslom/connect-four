@@ -19,16 +19,27 @@ describe('Game', function() {
 
   });
 
-  it('knows when game is over without a win', function() {
-      $('#squares').empty();
-      $('#circles').empty();
-      Board.drawBoard();
-    for(let i = 0; i < 43; i ++){
-      $('.empty').click();
-    }
-    let game = Game.playsCounter;
-    expect(Game.checkState()).to.eq(true);
-  });
+  describe('state of game', function() {
+
+    it('knows when game is over without a win', function() {
+        $('#squares').empty();
+        $('#circles').empty();
+        Board.drawBoard();
+      for(let i = 0; i < 43; i ++){
+        $('.empty').click();
+      }
+      let game = Game.playsCounter;
+      expect(Game.checkState()).to.eq(true);
+    });
+
+      it("finds four in a row", function() {
+        $('.empty').click();
+        $('.empty').click();
+        $('.empty').click();
+        $('.empty').click();
+        expect(Game.checkState()).to.eq('<div><h1>YOU HAVE ONE</h1></div>')
+      })
+    });
 });
 
 
