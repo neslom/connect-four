@@ -20,17 +20,16 @@ describe('Board', function() {
 
   describe('in initial state', function(){
     it('displays an empty board', function(){
-      expect($('.filled').length).to.eq(0);
+      expect($('.redPiece').length).to.eq(0);
       expect($('rect').length).to.eq(42);
     });
   });
 
   describe('user interaction', function () {
-    it('circle has filled class applied upon click', function () {
-      expect($('.filled').length).to.eq(0);
-      let empty = $('.empty').splice(0, 1);
-      $(empty).click();
-      expect($('.filled').length).to.eq(1);
+    it('circle has redPiece class applied upon click', function () {
+      expect($('.redPiece').length).to.eq(0);
+      $($('.empty').splice(0, 1)).click();
+      expect($('.redPiece').length).to.eq(1);
     });
   });
 });
