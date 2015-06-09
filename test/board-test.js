@@ -26,10 +26,10 @@ describe('Board', function() {
   });
 
   describe('user interaction', function () {
-    it('circle has redPiece class applied upon click', function () {
-      expect($('.redPiece').length).to.eq(0);
+    it('circle has blackPiece class applied upon click', function () {
+      expect($('.blackPiece').length).to.eq(0);
       $($('.empty').splice(0, 1)).click();
-      expect($('.redPiece').length).to.eq(1);
+      expect($('.blackPiece').length).to.eq(1);
     });
   });
 });
